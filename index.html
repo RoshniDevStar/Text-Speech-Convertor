@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝Text To Speech Converter! </title>
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <header>
+            <img src="./roshni.jpg" alt="Logo" class="header-logo">
+            <button class="header-nav">About</button>
+        </header>
+        <div class="main-content">
+            <div class="left-container">
+                <h1 class="title"></h1>
+                <div>
+                    <textarea id="textToSpeak" rows="4" cols="50" placeholder="Enter text to convert to speech..."></textarea>
+                    <div class="text-content">
+                        <select id="languageSelect">
+                            <option value="en-US">English (US)</option>
+                            <option value="es-ES">Spanish (Spain)</option>
+                            <option value="fr-FR">French (France)</option>
+                            <option value="de-DE">German (Germany)</option>
+                            <option value="it-IT">Italian (Italy)</option>
+                            <option value="hi-IN">Hindi (India)</option>
+                            <option value="bn-IN">Bengali (India)</option>
+                        </select>
+                        <button id="speakButton">🎤 Speak</button>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="right-container">
+              <img src="./social_factor.jpeg" alt="Logo">
+            </div>
+        </div>
+        <footer> 
+                    <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </footer>
+</body>
+<script>
+
+let speech = new SpeechSynthesisUtterance();
+
+document.querySelector('#speakButton').addEventListener('click', function () {
+    speech.text = document.querySelector("#textToSpeak").value;
+    const selectedLanguage = document.querySelector("#languageSelect").value;
+    speech.lang = selectedLanguage;
+    window.speechSynthesis.speak(speech);
+})
+const textArea = document.querySelector("#textToSpeak");
+let title = document.querySelector('.title')
+title.textContent = "Text-to-Speech Converter"
+title.style.color = "#989898"
+title.style.fontFamily = 'Croissant One', cursive;
+textArea.style.fontFamily = 'Croissant One', cursive;
+
+//****************************************From ChatGpt********************************************
+      /*if ('speechSynthesis' in window) {
+            const textToSpeak = document.getElementById('textToSpeak');
+            const languageSelect = document.getElementById('languageSelect');
+            const speakButton = document.getElementById('speakButton');
+
+            // Create a new instance of SpeechSynthesisUtterance
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance();
+
+            // Set default rate (speech speed)
+            utterance.rate = 1.0; // Adjust the rate as needed
+
+            // Event listener for the "Speak" button
+            speakButton.addEventListener('click', () => {
+                const text = textToSpeak.value;
+                if (text.trim() !== '') {
+                    const selectedLanguage = languageSelect.value;
+                    utterance.text = text;
+                    utterance.lang = selectedLanguage;
+                    synth.speak(utterance);
+                }
+            });
+
+            // List available voices (optional)
+            synth.addEventListener('voiceschanged', () => {
+                const voices = synth.getVoices();
+                console.log('Available voices:', voices);
+            });
+        } else {
+            alert('Text-to-speech is not supported in this browser.');
+        }*/
+         
+    </script>
+</html>

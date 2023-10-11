@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+header {
+    background-color: #0b0d26;
+     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-logo {
+    width: 50px;
+    height: auto; 
+    border-radius: 50px;
+}
+
+.header-nav {
+    background-color: #c55f17;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header-nav:hover
+{
+    background-color: #d26212;
+    color: white; 
+}
+
+footer {
+  background-color:#0b0d26;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer a {
+  font-size: 14px;
+  color: #fff;
+}
+
+
+div {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea::placeholder
+{
+    font-size: 20px;
+    font-family: 'Croissant One', cursive;
+}
+
+select, button {
+    background-color: #6c20cf;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #6c20cf;
+}
+.text-content
+{
+    display: flex;
+    justify-content: space-between;
+}
+.left-container
+{
+    width: 50%;
+}
+.right-container
+{
+    width: 50%;
+}
+select:hover,
+select:focus {
+    border: none;
+}
+.main-content
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+header button {
+    background-color: yellow;
+    color: black;
+    text-align: end;
+}
